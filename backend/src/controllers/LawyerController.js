@@ -22,25 +22,6 @@ class LawyerController {
 
     }
 
-    async login(req, res) {
-        const { email, password } = req.body;
-        let lawyer = await Lawyer.findOne({email});
-
-        if(!lawyer) {
-            return res.status(401).json({error: "Usuário não existe"});
-        }
-
-        let passwordIsValid = await bcrypt.compare(password,lawyer.password);
-
-        console.log(passwordIsValid);
-
-        if(passwordIsValid) {
-            return res.json(lawyer);
-        } else {
-            return res.status(401).json({error: "Senha inválida"});
-        }
-    }
-
 }
 
 export default new LawyerController();

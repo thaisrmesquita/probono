@@ -29,25 +29,6 @@ class ClientController {
 
     }
 
-    async login(req, res) {
-        const { cpf, password } = req.body;
-        let client = await Client.findOne({cpf});
-
-        if(!client) {
-            return res.status(401).json({error: "Usuário não existe"});
-        }
-
-        let passwordIsValid = await bcrypt.compare(password,client.password);
-
-        console.log(passwordIsValid);
-
-        if(passwordIsValid) {
-            return res.json(client);
-        } else {
-            return res.status(401).json({error: "Senha inválida"});
-        }
-    }
-
 }
 
 export default new ClientController();

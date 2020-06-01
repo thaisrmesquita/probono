@@ -80,6 +80,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
+
 binary-extensions@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.0.0.tgz#23c0df14f6a88077f5f986c0d167ec03c3d5537c"
@@ -459,6 +464,11 @@ fsevents@~2.1.2:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.1.3.tgz#fb738703ae8d2f9fe900c33836ddebee8b97f23e"
   integrity sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
+
+gerador-validador-cpf@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gerador-validador-cpf/-/gerador-validador-cpf-4.0.1.tgz#aa85d784eafbf53dbfbc55df21865f8c9a840518"
+  integrity sha512-zEkH2+mB2RSwYUBq8GDE/wL+uZD9Y5lS9SNLLNkc8arE7NkABRwTkKqhjLlwYGre1e2MzxdLFcN1hxiKxzjJ8g==
 
 get-stream@^4.1.0:
   version "4.1.0"

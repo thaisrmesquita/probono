@@ -1,0 +1,25 @@
+.form-container {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.container-process {
+    display: flex;
+    flex-direction: column;
+}
+.container-process h3:nth-child(1) {
+    font-weight: 500;
+    font-size: 16px;
+}
+.container-process h3:nth-child(2) {
+    font-size: 14px;
+}
+.container-process h3:nth-child(3) {
+    font-size: 14px;
+}
+

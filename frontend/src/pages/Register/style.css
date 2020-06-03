@@ -1,0 +1,10 @@
+.container-register-form {
+    height: calc(100vh - 54px);
+    display: flex;
+    align-items: center;
+}
+
+.content-register-container {
+    width: 90%;
+    margin: 0 auto;
+}

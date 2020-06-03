@@ -3,24 +3,25 @@ import { Link } from 'react-router-dom';
 import { FiLogIn, FiM } from 'react-icons/fi';
 import './style.css';
 
-function FormLogonLawyer () {
+function FormRegisterLawyer () {
     return (
         <div className="form-container">
             <form className="form">
-                <h3>Faça login em sua conta</h3>
+                <h3>Crie a sua conta aqui</h3>
                 <div className="form-group">
-                    <input className="input-text" placeholder="Email"/>
+                    <input className="input-text" placeholder="Nome"/>
+                    <input className="input-text" placeholder="E-mail"/>
                     <input className="input-text" type="password" placeholder="Senha"/>
                 </div>
                 <div className="form-group form-group-btn"> 
-                <button className="button-submit" type="submit">Entrar</button>
+                <button className="button-submit" type="submit">Cadastrar</button>
                 </div>
                 <div>
-                   <p>Não possui uma conta? <Link to="/register">Registre-se aqui</Link></p>
+                   <p>Já é um membro? <Link to="/login">Entre aqui</Link></p>
                 </div>
             </form>
         </div>
     );
 }
 
-export default FormLogonLawyer;
+export default FormRegisterLawyer;

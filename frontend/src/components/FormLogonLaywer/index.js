@@ -13,7 +13,7 @@ function FormLogonLawyer () {
                     <input className="input-text" type="password" placeholder="Senha"/>
                 </div>
                 <div className="form-group form-group-btn"> 
-                <button className="button-submit" type="submit">Entrar</button>
+                <Link to="/dashboard"><button className="button-submit" type="submit">Entrar</button></Link>
                 </div>
                 <div>
                    <p>Não possui uma conta? <Link to="/register">Registre-se aqui</Link></p>

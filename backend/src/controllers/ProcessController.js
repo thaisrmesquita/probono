@@ -1,15 +1,19 @@
 import Process from '../models/Process';
+import Client from '../models/Client';
 
 class ProcessController {
 
     async index(req, res) {
         const { number } = req.params;
 
-        let process = await Process.findOne({number});
+        let process = await (await Process.findOne({number})).toObject();
 
         if(!process) {
             return res.status(401).json({error: "Processo não encontrado"});
         }
+
+        let client = await (await Client.findOne({cpf: process.client})).toJSON();
+        process.client = client;
 
         return res.json(process);
     }

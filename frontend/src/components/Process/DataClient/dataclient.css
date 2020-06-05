@@ -1,0 +1,8 @@
+.container-data-client {
+    margin-top: 20px;
+}
+.container-data-client .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+}

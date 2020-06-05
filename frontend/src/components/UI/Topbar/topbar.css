@@ -1,0 +1,32 @@
+.topbar {
+    background: linear-gradient(270deg, #E71215 19.54%, #941014 100%);
+    padding: 5px 0 ;
+}
+
+.topbar .topbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.topbar .topbar-container .topbar-logo {
+    width: 50%;
+}
+.topbar .topbar-container .topbar-icon-logout {
+    width: 50%;
+    text-align: right;
+}
+.topbar .logo {
+    width: 29px;
+    height: auto;
+}
+
+@media(min-width: 750px) {
+    .topbar {
+        padding: 10px 0;
+    }
+    .topbar .logo {
+        width: 34px;
+        height: auto;
+    }
+}

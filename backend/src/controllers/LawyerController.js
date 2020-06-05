@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 class LawyerController {
 
     async store(req,res) {
-        const { email, password } = req.body;
+        const { name, email, password } = req.body;
         const created = new Date();
         const updated = new Date();
 
@@ -13,7 +13,7 @@ class LawyerController {
         
         if(!lawyer) {
             let passwordHash = await bcrypt.hash(password, 8);
-            lawyer = await Lawyer.create({email, password:passwordHash, created, updated});
+            lawyer = await Lawyer.create({name, email, password:passwordHash, created, updated});
             delete lawyer.password;
             return res.json(lawyer);
         } else {

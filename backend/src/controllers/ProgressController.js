@@ -7,16 +7,19 @@ class ProgressController {
         const { description, number } = req.body;
         const published = new Date();
 
+        let process = await Process.findOne({number});
+
+        if (process === null) {
+            return res.status(400).json({error: true, msg: "Processo Não existe"});
+        }
+
         let progress = await Progress.create({
             description,
             published
         });
 
-        let process = await Process.findOne({number});
-
         process.progress.push(progress);
         process.save();
-
 
         return res.json(process);
     }

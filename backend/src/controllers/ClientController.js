@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs';
 class ClientController {
 
     async store(req,res) {
-        const { cpf, password, email } = req.body;
+        const { name, cpf, password, email } = req.body;
         const created = new Date();
         const updated = new Date();
         

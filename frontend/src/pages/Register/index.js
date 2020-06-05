@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header';
+import Topbar from '../../components/UI/Topbar';
 import FormRegisterLawyer from '../../components/FormRegisterLaywer';
 
 import './style.css';
@@ -7,7 +7,7 @@ import './style.css';
 function Register () {
     return(
         <div>
-            <Header/>
+            <Topbar/>
             <div className="container-register-form">
                 <div className="content-register-container">
                     <FormRegisterLawyer />

@@ -1,0 +1,22 @@
+.login-container {
+    background-image: url('../../../components//Assets/images/backgroundmobile.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container-info-form {
+    background: rgba(46, 5, 5, 0.42);
+    width: 289px;
+    height: auto;
+}
+
+@media(min-width:750px) {
+    .container-info-form {
+        background: rgba(46, 5, 5, 0.42);
+        width: 440px;
+        height: auto;
+    }       
+}

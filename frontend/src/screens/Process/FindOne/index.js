@@ -13,6 +13,7 @@ function ProcessFindOne (props) {
     console.log("Props: ", props);
 
     const number = props.location.state.number;
+    const lenProgress = props.location.state.lenProgress;
     const [process, setProcess] = useState(null)
 
     useEffect(()=>{
@@ -20,9 +21,7 @@ function ProcessFindOne (props) {
         }).then(response => {
             setProcess(response.data);
         })
-    },[number]);
-
-    console.log(process);
+    },[lenProgress]);
 
     return (
         <div>
@@ -31,8 +30,8 @@ function ProcessFindOne (props) {
                 <div className="container-process">
                     <Welcome />
                     <TitleProcessOne {...props}/>
-                    <DataClient {...props} />
-                    <TitleProgress {...props} />
+                    <DataClient client={process.client} />
+                    <TitleProgress number={number} {...props} />
                     <ProgressList progress={process.progress} />
                 </div>
             }

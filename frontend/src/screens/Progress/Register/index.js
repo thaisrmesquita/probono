@@ -2,14 +2,14 @@ import React from 'react';
 import './progressregister.css';
 
 import Topbar from '../../../components/UI/Topbar';
+import ProgressForm from '../../../components/Progress/Form';
 
 function ProgressRegister () {
     return (
         <div>
             <Topbar />
-            <div>
-                <h2>Cadastro de Novo Andamento</h2>
-                <hr/>
+            <div className="container-progress-register">
+                <ProgressForm />
             </div>
         </div>
     )

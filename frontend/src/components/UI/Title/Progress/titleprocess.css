@@ -26,6 +26,16 @@
     
 }
 
+.btn-progress {
+    background-color: red;
+}
+
+.form-container-form-progress {
+        max-width: 440px;
+        margin: 0 auto;
+        padding: 30px;
+}
+
 @media(min-width:750px) {
     .title-progress .title {
         font-size: 20px;

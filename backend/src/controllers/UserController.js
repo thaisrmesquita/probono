@@ -1,12 +1,9 @@
-import Client from '../models/Client';
 import { validate } from 'gerador-validador-cpf';
-
 import bcrypt from 'bcryptjs';
 
-class ClientController {
-
+class UserController {
     async store(req,res) {
-        const { name, cpf, password } = req.body;
+        const { name, email, cpf, password } = req.body;
         const created = new Date();
         const updated = new Date();
         
@@ -20,7 +17,7 @@ class ClientController {
         
         if(!client) {
             let passwordHash = await bcrypt.hash(password, 8);
-            client = await Client.create({cpf, password:passwordHash, created, updated});
+            client = await Client.create({cpf, password:passwordHash, email, created, updated});
             delete client.password;
             return res.json(client);
         } else {
@@ -28,7 +25,6 @@ class ClientController {
         }
 
     }
-
 }
 
-export default new ClientController();
+export default new UserController ();

@@ -4,20 +4,9 @@ import './list.css';
 
 import api from '../../../services/api';
 
-function ProcessList () {
-        const lawyerEmail = localStorage.getItem('lawyerEmail');
-        const [processes, setProcesses] = useState([]);
+function ProcessList (props) {
+        const processes = props.processes;
         const history = useHistory();
-
-        useEffect(()=>{
-            api.get('process-lawyer', {
-                params: {
-                    responsible: lawyerEmail,
-                }
-            }).then(response => {
-                setProcesses(response.data);
-            })
-        },[lawyerEmail]);
 
         function handleProcess(e, process) {
             console.table(process);

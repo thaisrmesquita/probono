@@ -1,0 +1,6 @@
+.container-progress-register {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    height: 100vh;
+}

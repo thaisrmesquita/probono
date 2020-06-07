@@ -5,6 +5,8 @@ import bcrypt from 'bcryptjs';
 
 class SessionController {
 
+    
+
     async login(req, res) {
         const { user, password } = req.body;
 

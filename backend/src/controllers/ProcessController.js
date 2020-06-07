@@ -12,8 +12,13 @@ class ProcessController {
             return res.status(401).json({error: "Processo não encontrado"});
         }
 
-        let client = await (await Client.findOne({cpf: process.client})).toJSON();
-        process.client = client;
+        let client = await (await Client.findOne({cpf: process.client}));
+        
+        if (client !== null) {
+            client = client.toJSON();
+            process.client = client;
+        }
+        
 
         return res.json(process);
     }

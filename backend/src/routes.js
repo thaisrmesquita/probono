@@ -4,6 +4,7 @@ import ClientController from './controllers/ClientController';
 import SessionController from './controllers/SessionController';
 import ProcessController from './controllers/ProcessController';
 import ProgressController from './controllers/ProgressController';
+import TranslationController from './controllers/TranslationController';
 const routes = new Router();
 
 routes.post('/lawyer', LawyerController.store);
@@ -18,5 +19,7 @@ routes.get('/process-lawyer', ProcessController.findByResponsible);
 routes.delete('/process/:idProcess', ProcessController.delete);
 
 routes.post('/progress', ProgressController.store);
+
+routes.post('/translation', TranslationController.store);
 
 export default routes;

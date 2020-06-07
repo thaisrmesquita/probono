@@ -1,5 +1,6 @@
 import Progress from '../models/Progress';
 import Process from '../models/Process';
+import Translation from '../models/Translation';
 
 class ProgressController {
     
@@ -15,8 +16,24 @@ class ProgressController {
 
         let progress = await Progress.create({
             description,
-            published
+            published,
+            translation: null
         });
+
+        let translations = await Translation.find();
+
+        let compare = description.split(" ");
+
+        for (let translation of translations) {
+            let rule = translation.rule.split(" ");
+            for (let ruleDescription of compare) {
+                let addRule = rule.includes(ruleDescription);
+                if (addRule) {
+                    progress.translation = translation.description
+                    await progress.save()
+                }
+            }
+        }
 
         process.progress.push(progress);
         process.save();

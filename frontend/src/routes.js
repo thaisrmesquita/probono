@@ -7,6 +7,7 @@ import UserLogin from './screens/User/Login';
 import ProcessFindOne from './screens/Process/FindOne';
 import ProgressRegister from './screens/Progress/Register';
 import UserRegister from './screens/User/Register';
+import ProcessClient from './screens/Process/Client';
 
 export default function Routes() {
     return (
@@ -14,6 +15,7 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact component={ UserLogin }/>
                 <Route path="/register" component={ UserRegister }/>
+                <Route path="/dashboard/client" render={props => <ProcessClient {...props}/>}/>
                 <Route path="/dashboard" render={props => <DashboardLawyer {...props}/>}/>
                 <Route path="/progress/register" component={ ProgressRegister }/>
                 <Route path="/process" render={props => <ProcessFindOne {...props}/>}/>

@@ -20,7 +20,7 @@ class ClientController {
         
         if(!client) {
             let passwordHash = await bcrypt.hash(password, 8);
-            client = await Client.create({cpf, password:passwordHash, created, updated});
+            client = await Client.create({name, cpf, password:passwordHash, created, updated});
             delete client.password;
             return res.json(client);
         } else {

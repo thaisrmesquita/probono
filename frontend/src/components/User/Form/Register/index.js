@@ -10,20 +10,31 @@ function FormRegister () {
     const [cpf, setCpf] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    
+    const [user, setUser] = useState(1);
 
     const history = useHistory();
 
+    function handleUser(value) {
+        setUser(parseInt(value));
+        console.log(value);
+    }
     async function handleRegister(e) {
         e.preventDefault();
         const data = {
             name,
-            cpf,
             email,
-            password
+            password,
+            cpf
         };
         try {
-            const response = await api.post('lawyer', data);
-            alert(`Seu usuario de acesso ${email}`);
+            if(user === 1) {
+                const response = await api.post('lawyer', data);
+                alert(`Seu usuario de acesso ${email}`);
+            } else {
+                const response = await api.post('client', data);
+                alert(`Seu usuario de acesso ${cpf}`);
+            }
             history.push('/');
         } catch (err) {
             alert(`Erro no cadastro! Tente novamente!`);
@@ -34,15 +45,22 @@ function FormRegister () {
         <div className="form-container">
             <form className="form" onSubmit={handleRegister}>
                 <h3>Crie a sua conta aqui</h3>
+                <div className="form-group form-group-btn"> 
+                    <select name="user" id="user" onChange={e => handleUser(e.target.value)}>
+                        <option value="1">Advogado</option>
+                        <option value="2">Cliente</option>
+                    </select>
+                </div>
                 <div className="form-group">
                     <input className="input-text" placeholder="Nome"
                     value={name}
                     onChange={e => setName(e.target.value)}
                     />
-                    <input className="input-text" placeholder="CPF"
-                    value={cpf}
-                    onChange={e => setCpf(e.target.value)}
-                    />
+                    {user === 2 &&
+                        <input className="input-text" placeholder="CPF"
+                        value={cpf}
+                        onChange={e => setCpf(e.target.value)}/>
+                    }
                     <input className="input-text" placeholder="E-mail"
                     value={email}
                     onChange={e => setEmail(e.target.value)}/>

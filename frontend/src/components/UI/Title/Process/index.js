@@ -12,7 +12,7 @@ function TitleProcess() {
 
     return (
         <div>
-            <div className="container-title-process">
+            <div className="container-title-process-dash">
                 <div className="title-process">
                     <h2 className="title">Processos</h2>
                 </div>
@@ -20,7 +20,7 @@ function TitleProcess() {
                     <div className="container-icon">
                         <>
                             <Button variant="danger" onClick={() => setModalShow(true)}>
-                                <FiPlus size={32} color="#fff" />
+                                <FiPlus size={24} color="#fff" />
                             </Button>
                             <ProcessModal
                                 show={modalShow}

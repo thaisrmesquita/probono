@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Topbar from '../../../components/UI/Topbar';
 import Welcome from '../../../components/UI/Welcome';
-import TitleProcessOne from '../../../components/UI/Title/ProcessOne';
+import TitleProcessOneLawyer from '../../../components/UI/Title/ProcessOneLawyer';
 import DataClient from '../../../components/Process/DataClient';
 import TitleProgress from '../../../components/UI/Title/Progress';
 import ProgressList from '../../../components/Progress/List';
@@ -29,7 +29,7 @@ function ProcessFindOne (props) {
             {process !== null &&
                 <div className="container-process">
                     <Welcome />
-                    <TitleProcessOne {...props}/>
+                    <TitleProcessOneLawyer id={process._id} {...props}/>
                     <DataClient client={process.client} />
                     <TitleProgress number={number} {...props} />
                     <ProgressList progress={process.progress} />

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import api from '../../../services/api';
 import { useHistory } from 'react-router-dom';
 
+import './search.css';
+
 function ProcessSearch() {
     const [number, setNumber] = useState('');
 
@@ -21,8 +23,8 @@ function ProcessSearch() {
     }
     return (
         <div>
-            <form onSubmit={handleSearch}>
-                <input type="text" placeholder="Search"
+            <form onSubmit={handleSearch} className='form-search'>
+                <input className="input-search" type="text" placeholder="Buscar processo"
                     value={number}
                     onChange={e => setNumber(e.target.value)}
                 />

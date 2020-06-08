@@ -3,9 +3,18 @@ import Client from '../models/Client';
 
 class ProcessController {
 
+    async update (req, res) {
+        const { number, client } = req.body;
+
+        const process = await Process.updateOne({id:_id}, {
+            number,
+            client
+        });
+        return res.json(process);        
+    }
+
     async index(req, res) {
         const { number } = req.params;
-
         let process = await (await Process.findOne({number})).toObject();
 
         if(!process) {
@@ -59,6 +68,7 @@ class ProcessController {
             const { idProcess } = req.params;
             await Process.findByIdAndDelete(idProcess);
             return res.status(200).json({sucess: "Registro apagado com sucesso"});
+
         } catch (error) {
             console.log(error);
             return res.status(500).json({error: "Erro ao processar solicitação"});

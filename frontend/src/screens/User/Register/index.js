@@ -8,7 +8,7 @@ function UserRegister() {
     return (
         <div>
             <Topbar />
-            <div>
+            <div className="container-form-register">
                 <FormRegister />
             </div>
         </div>

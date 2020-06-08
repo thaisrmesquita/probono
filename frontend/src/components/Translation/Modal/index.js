@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, Redirect } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
-
+import './modaltranslation.css';
 import api from '../../../services/api';
 
 function TranslationModal(props) {
@@ -44,7 +44,7 @@ function TranslationModal(props) {
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Cadastro de Nova Regra de Tradução
+                    Cadastrar Regra de Tradução
           </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -59,7 +59,7 @@ function TranslationModal(props) {
                                 onChange={e => setDescription(e.target.value)} />
                             </div>
                         <div className="form-group form-group-btn">
-                            <Button bg-color="#D41215" variant="danger" onClick={handleRegister} >
+                            <Button bg-color="#D41215" variant="light" onClick={handleRegister} >
                                 Cadastrar
                             </Button>
                         </div>

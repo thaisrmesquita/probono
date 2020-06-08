@@ -20,7 +20,7 @@
     position: relative;
 }
 .login-form input {
-    background: rgba(255, 255, 255, 0.47);
+    background-color: rgba(255, 255, 255, 0.47);
     border-radius: 50px;
     width: 100%;
     padding: 11px 20px 11px 50px;
@@ -29,8 +29,23 @@
     font-size: 16px;
     color:#fff;
 }
-.login-form .login-input-text {
-}
+
+.login-form ::-webkit-input-placeholder {
+    color: #fff;
+ }
+ 
+ .login-form :-moz-placeholder { /* Firefox 18- */
+    color: #fff;  
+ }
+ 
+ .login-form ::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;  
+ }
+ 
+ .login-form :-ms-input-placeholder {  
+    color: #fff;  
+ }
+
 .login-form .login-button-submit {
     border: 3px solid #FD252C;
     background: rgba(253, 37, 44, 0.1);

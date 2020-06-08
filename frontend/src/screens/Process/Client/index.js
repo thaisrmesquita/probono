@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import './clientprocess.css';
-
+import Topbar from '../../../components/UI/Topbar';
+import TitleProcessClient from '../../../components/UI/Title/ProcessClient';
 import ProcessList from '../../../components/Process/Client/List';
-
+import SearchProcess from '../../../components/Process/Search';
+import Welcome from '../../../components/UI/Welcome';
 import api from '../../../services/api';
+
+import './clientprocess.css';
 
 function ProcessClient (props) {
 
@@ -27,8 +31,13 @@ function ProcessClient (props) {
 
     return (
         <div>
-            <h1>aaaamor</h1>
-            <ProcessList processes={processes}/>
+            <Topbar />
+            <div class="container-dashboard-client">
+                <Welcome />
+                <TitleProcessClient />
+                <SearchProcess />  
+                <ProcessList processes={processes}/>
+            </div>
         </div>
     )
 }

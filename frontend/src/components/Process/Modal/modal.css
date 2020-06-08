@@ -1,0 +1,10 @@
+.btn-light {
+    border: none !important;
+    background: rgba(52, 152, 219) !important;
+    color: #fff !important;
+    padding: 12px 50px 11px 50px !important;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 50px !important;
+}

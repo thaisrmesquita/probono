@@ -20,20 +20,6 @@ function TitleProgress({number}) {
                     <div className="title-progress">
                         <h2 className="title">Andamentos:</h2>
                     </div>
-                    <div className="icon-progress">
-                        <div className="container-icon">
-                            <>
-                                <Button closeButton bg-color="#D41215" variant="danger" onClick={() => setModalShow(true)}>
-                                    <FiPlus size={18} color="#fff" />
-                                </Button>
-                                <ProgressModal
-                                    show={modalShow}
-                                    onHide={(show) => handleModal(show)}
-                                    number={number}
-                                />
-                            </>
-                        </div>
-                    </div>
                 </div>
                 <div className="hr"></div>
         </div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, Redirect } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 
+import './modal.css';
+
 import api from '../../../services/api';
 
 function ProcressModal(props) {
@@ -60,7 +62,7 @@ function ProcressModal(props) {
                                 onChange={e => setClient(e.target.value)} />
                             </div>
                         <div className="form-group form-group-btn">
-                            <Button bg-color="#D41215" variant="danger" onClick={handleRegister} >
+                                <Button bg-color="#D41215" variant="light" onClick={handleRegister} >
                                 Cadastrar
                             </Button>
                         </div>

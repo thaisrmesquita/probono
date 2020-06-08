@@ -17,6 +17,7 @@ routes.get('/process/:number', ProcessController.index);
 routes.get('/process', ProcessController.indexAll);
 routes.get('/process-lawyer', ProcessController.findByResponsible);
 routes.get('/process-client', ProcessController.findByClient);
+routes.put('/process/:idProcess', ProcessController.update);
 routes.delete('/process/:idProcess', ProcessController.delete);
 
 routes.post('/progress', ProgressController.store);

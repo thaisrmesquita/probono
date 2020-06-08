@@ -46,7 +46,7 @@ function FormRegister () {
             <form className="form" onSubmit={handleRegister}>
                 <h3>Crie a sua conta aqui</h3>
                 <div className="form-group form-group-btn"> 
-                    <select name="user" id="user" onChange={e => handleUser(e.target.value)}>
+                    <select className="select" name="user" id="user" onChange={e => handleUser(e.target.value)}>
                         <option value="1">Advogado</option>
                         <option value="2">Cliente</option>
                     </select>
@@ -68,8 +68,8 @@ function FormRegister () {
                     value={password}
                     onChange={e => setPassword(e.target.value)}/>
                 </div>
-                <div className="form-group form-group-btn"> 
-                <button className="button-submit" type="submit">Cadastrar</button>
+                <div className="register-form form-group form-group-btn"> 
+                    <button className="button-submit" type="submit">Cadastrar</button>
                 </div>
                 <div>
                    <p>Já é um membro? <Link to="/">Entre aqui</Link></p>

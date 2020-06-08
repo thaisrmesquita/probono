@@ -5,6 +5,7 @@ import TiTleProcess from '../../components/UI/Title/Process';
 import RuleRegister from '../../components/UI/Title/RuleRegister';
 import ProcessList from '../../components/Process/List';
 import ProcessSearch from '../../components/Process/Search';
+import MenuDropDown from '../../components/Translation/MenuDropdown';
 import './style.css';
 
 import api from '../../services/api';
@@ -33,10 +34,11 @@ function DashboardLawyer(props) {
             <Topbar />
             <div className="container-dashboard">
                 <Welcome />
+                <MenuDropDown />
                 <TiTleProcess />
                 <ProcessSearch />
-                <RuleRegister />
                 <ProcessList processes={processes}/>
+                {/*<RuleRegister />*/}
             </div>
         </div>
     );

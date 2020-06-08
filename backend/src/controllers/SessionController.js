@@ -19,9 +19,12 @@ class SessionController {
                 return res.status(401).json({error: "Usuário não existe"});
             }
 
+            client = client.toObject();
+
             let passwordIsValid = await bcrypt.compare(password,client.password);
 
             if(passwordIsValid) {
+                client.user = 0;
                 return res.json(client);
             } else {
                 return res.status(401).json({error: "Senha inválida"});
@@ -36,9 +39,12 @@ class SessionController {
                 return res.status(401).json({error: "Usuário não existe"});
             }
 
+            lawyer = lawyer.toObject();
+
             let passwordIsValid = await bcrypt.compare(password, lawyer.password);
 
             if(passwordIsValid) {
+                lawyer.user = 1;
                 return res.json(lawyer);
             } else {
                 return res.status(401).json({error: "Senha inválida"});

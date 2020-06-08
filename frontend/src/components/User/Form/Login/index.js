@@ -14,11 +14,17 @@ function FormLogin () {
         e.preventDefault();
 
         try {
+
           const response = await api.post('login', {user:email,password});
           localStorage.setItem('lawyerEmail', email);
           localStorage.setItem('lawyerName', response.data.name);
-          history.push('/dashboard');
-
+          localStorage.setItem('clientCpf', response.data.cpf);
+         
+          if(response.data.user === 1) {
+            history.push('/dashboard');
+          } else {
+              history.push('dashboard/client')
+          }
 
         } catch(err) {
             alert('Falha no login');

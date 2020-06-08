@@ -18,21 +18,18 @@ class TranslationController {
 
         for (let process of processes) {
             let progresses = process.progress;
-            console.log(progresses.length);
             for (let progress = 0; progress < progresses.length; progress++){
-                let splitDescription = progresses[progress].description.split(" ");
-                for (let ruleDescription of compare) {
-                    let addRule = splitDescription.includes(ruleDescription);
-                    if (addRule){
-                        console.log("Possui a tradução");
-                        let index = progresses.indexOf(progress);
-                        progresses[progress].translation = description;
-                        console.log(progresses[progress]);
-                        progresses.splice(index, 1);
-                        process.progress.push(progresses[progress])
-                        await process.save();
+                    let splitDescription = progresses[progress].description.split(" ");
+                    for (let ruleDescription of compare) {
+                        let addRule = splitDescription.includes(ruleDescription);
+                        if (addRule){
+                            let index = progresses.indexOf(progress);
+                            progresses[progress].translation = description;
+                            progresses.splice(index, 1);
+                            process.progress.push(progresses[progress])
+                            await process.save();
+                        }
                     }
-                }
             }
             
         }

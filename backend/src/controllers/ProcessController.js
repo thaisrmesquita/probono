@@ -35,6 +35,20 @@ class ProcessController {
         return res.json(process);
     }
 
+    async findByClient(req, res) {
+        const { client } = req.query;
+
+        let process = await Process.find({ client });
+
+        if(!process) {
+            return res.status(401).json({error: "Processo não encontrado"});
+        }
+
+        console.log(process);
+
+        return res.json(process);
+    }
+
     async indexAll(req, res) {
         let process = await Process.find();   
         return res.json(process);

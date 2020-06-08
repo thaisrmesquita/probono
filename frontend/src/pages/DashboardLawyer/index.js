@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Topbar from '../../components/UI/Topbar';
 import Welcome from '../../components/UI/Welcome';
 import TiTleProcess from '../../components/UI/Title/Process';
+import RuleRegister from '../../components/UI/Title/RuleRegister';
 import ProcessList from '../../components/Process/List';
 import ProcessSearch from '../../components/Process/Search';
 import './style.css';
@@ -34,6 +35,7 @@ function DashboardLawyer(props) {
                 <Welcome />
                 <TiTleProcess />
                 <ProcessSearch />
+                <RuleRegister />
                 <ProcessList processes={processes}/>
             </div>
         </div>

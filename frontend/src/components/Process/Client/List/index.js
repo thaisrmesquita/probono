@@ -13,7 +13,7 @@ function ProcessList (props) {
             e.preventDefault();
 
             history.push({
-                pathname: '/process', 
+                pathname: '/client/process', 
                 state: process
             })
         }

@@ -8,6 +8,7 @@ import ProcessFindOne from './screens/Process/FindOne';
 import ProgressRegister from './screens/Progress/Register';
 import UserRegister from './screens/User/Register';
 import ProcessClient from './screens/Process/Client';
+import ProcessClientFindOne from './screens/Process/Client/FindOne';
 
 export default function Routes() {
     return (
@@ -19,6 +20,7 @@ export default function Routes() {
                 <Route path="/dashboard" render={props => <DashboardLawyer {...props}/>}/>
                 <Route path="/progress/register" component={ ProgressRegister }/>
                 <Route path="/process" render={props => <ProcessFindOne {...props}/>}/>
+                <Route path="/client/process" exact render={props => <ProcessClientFindOne {...props}/>}/>
             </Switch>
         </BrowserRouter>
     );

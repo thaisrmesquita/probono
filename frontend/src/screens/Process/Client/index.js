@@ -7,7 +7,7 @@ import api from '../../../services/api';
 
 function ProcessClient (props) {
 
-    const clientCpf = localStorage.getItem('clientCPF');
+    const clientCpf = localStorage.getItem('clientCpf');
 
     let numberProcess = null;
     if (props.location.state) {
@@ -16,9 +16,9 @@ function ProcessClient (props) {
     const [processes, setProcesses] = useState([]);
 
     useEffect(() => {
-        api.get('process-lawyer', {
+        api.get('process-client', {
             params: {
-                responsible: lawyerEmail,
+                client: clientCpf,
             }
         }).then(response => {
             setProcesses(response.data);
@@ -27,7 +27,8 @@ function ProcessClient (props) {
 
     return (
         <div>
-            <ProcessList {...props}/>
+            <h1>aaaamor</h1>
+            <ProcessList processes={processes}/>
         </div>
     )
 }

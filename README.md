@@ -96,10 +96,11 @@ String|String
 
 ## Páginas
 
+![](https://github.com/thaisrmesquita/probono/blob/master/image-layout/telas.png?raw=true)
 
 Para a criação das páginas do projeto, sugere-se um layout mais limpo, com uso de responsividade para a adaptação em diversos tamanhos de dispositivos.
 
-[Aqui](https://www.figma.com/proto/5PEjDAURyE6p3MWpAVkcBm/Probono?node-id=2%3A0&scaling=scale-down) é possivel visualizar a poposta de layout do projeto.
+[Aqui](https://www.figma.com/proto/5PEjDAURyE6p3MWpAVkcBm/Probono?node-id=2%3A0&scaling=scale-down) é possivel visualizar a proposta de layout do projeto.
 
 
  

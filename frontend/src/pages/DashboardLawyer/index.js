@@ -25,6 +25,7 @@ function DashboardLawyer(props) {
                 responsible: lawyerEmail,
             }
         }).then(response => {
+            console.log(response);
             setProcesses(response.data);
         })
     }, [numberProcess]);

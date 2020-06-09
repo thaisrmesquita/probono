@@ -41,7 +41,21 @@ class ProcessController {
             return res.status(401).json({error: "Processo não encontrado"});
         }
 
-        return res.json(processes);
+        let outProcess = []
+
+        for (let process of processes) {
+            process = process.toObject();
+            let client = await Client.findOne({cpf: process.client});
+    
+            if (client !== null) {
+                client = client.toObject();
+                process.client = client;
+            }
+            outProcess.push(process);
+            
+        }
+
+        return res.json(outProcess);
     }
 
     async findByClient(req, res) {

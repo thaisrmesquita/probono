@@ -7,6 +7,7 @@ import api from '../../../services/api';
 function ProcessList (props) {
         const processes = props.processes;
         const history = useHistory();
+    
 
         function handleProcess(e, process) {
             console.table(process);
@@ -24,8 +25,8 @@ function ProcessList (props) {
             <div className="form-container-process" onClick={e => handleProcess(e, process)}>
                  <div className="container-process">
                      <h3>Nº: {process.number}</h3>
-                     <h3>Cliente: Thaís Ribeiro de Mesquita</h3>
-                     <h3>CPF: {process.client}</h3>
+                     <h3>Cliente: {process.client.name}</h3>
+                     <h3>CPF: {process.client.cpf}</h3>
                  </div>
              </div>   
             ))}         

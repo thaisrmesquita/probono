@@ -1,4 +1,3 @@
-# Probono
 ## Descrição do Projeto :star:
 Desenvolver uma plataforma capaz de ajudar a compreensão de andamentos de processos judiciais.
 

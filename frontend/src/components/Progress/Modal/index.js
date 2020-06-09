@@ -53,7 +53,7 @@ function ProgressModal(props) {
                                 onChange={e => setDescription(e.target.value)} />
                         </div>
                         <div className="form-group form-group-btn">
-                            <Button bg-color="#D41215" variant="danger" onClick={handleRegister} >
+                            <Button bg-color="#D41215" variant="light" onClick={handleRegister} >
                                 Cadastrar
                             </Button>
                         </div>

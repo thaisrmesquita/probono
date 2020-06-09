@@ -34,7 +34,7 @@ function FormLogin () {
         <div className="login-form-container">
         <form className="login-form" onSubmit={handleLogin}>
             <div className="login-form-group">
-                <input className="input-text" placeholder="&#xf205; Usuário" 
+                <input className="input-text" placeholder="Usuário" 
                 value={email}
                 onChange={e=>setEmail(e.target.value)}
                 />

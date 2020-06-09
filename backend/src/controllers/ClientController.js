@@ -4,6 +4,15 @@ import { validate } from 'gerador-validador-cpf';
 import bcrypt from 'bcryptjs';
 
 class ClientController {
+    async show(req,res) {
+        const {cpf} = req.params;
+        const client = await Client.findOne({cpf});
+
+        if(!client) {
+            return res.status(401).json({error: "Cliente não encontrado"});
+        }
+        return res.json(client);
+    }
 
     async store(req,res) {
         const { name, cpf, password } = req.body;

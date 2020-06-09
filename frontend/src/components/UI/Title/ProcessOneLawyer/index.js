@@ -26,7 +26,6 @@ function TitleProcessOne (props) {
                 </div>
                 <div className="title-process-one">
                     <FiTrash2 className="icons" size={20} color="618AC8" onClick={() => handleDeleteProcess(process.id)}/>
-                    <FiEdit2 className="icons" size={20} color="618AC8"/>
                 </div>
             </div>
             <div className="hr"></div>

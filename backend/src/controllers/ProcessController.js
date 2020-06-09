@@ -35,13 +35,13 @@ class ProcessController {
     async findByResponsible(req, res) {
         const { responsible } = req.query;
 
-        let process = await Process.find({ responsible });
+        let processes = await Process.find({ responsible });
 
-        if(!process) {
+        if(!processes) {
             return res.status(401).json({error: "Processo não encontrado"});
         }
 
-        return res.json(process);
+        return res.json(processes);
     }
 
     async findByClient(req, res) {
@@ -59,7 +59,17 @@ class ProcessController {
     }
 
     async indexAll(req, res) {
-        let process = await Process.find();   
+        let process = await Process.find(); 
+
+        let client = await (await Client.findOne({cpf: process.client}));
+
+        if (client !== null) {
+            client = client.toJSON();
+            process.client = client;
+        }
+        console.log(client);
+        
+        
         return res.json(process);
     }
 

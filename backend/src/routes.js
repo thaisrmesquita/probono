@@ -9,6 +9,7 @@ const routes = new Router();
 
 routes.post('/lawyer', LawyerController.store);
 routes.post('/client', ClientController.store);
+routes.get('/client/:cpf', ClientController.show);
 
 routes.post('/login', SessionController.login);
 

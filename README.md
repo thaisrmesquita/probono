@@ -102,6 +102,20 @@ Para a criação das páginas do projeto, sugere-se um layout mais limpo, com us
 
 [Aqui](https://www.figma.com/proto/5PEjDAURyE6p3MWpAVkcBm/Probono?node-id=2%3A0&scaling=scale-down) é possivel visualizar a proposta de layout do projeto.
 
+## Para Teste
 
- 
- 
+Advogado:
+
+Login: jose@gmail.com
+senha: 1234
+
+Cliente:
+
+Login: 05732769358
+senha:1234
+
+A tela de Login é única para ambos, alterando apenas a forma em que o usuário é identificado.
+
+É isso :))
+
+

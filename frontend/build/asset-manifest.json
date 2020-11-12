@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bf3a4b37.chunk.css",
+    "main.js": "/static/js/main.efebbccc.chunk.js",
+    "main.js.map": "/static/js/main.efebbccc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fc75219d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fc75219d.js.map",
+    "static/css/2.723421eb.chunk.css": "/static/css/2.723421eb.chunk.css",
+    "static/js/2.3af8a948.chunk.js": "/static/js/2.3af8a948.chunk.js",
+    "static/js/2.3af8a948.chunk.js.map": "/static/js/2.3af8a948.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e15eabecd3fe792d9305dfa544b33b5c.js": "/precache-manifest.e15eabecd3fe792d9305dfa544b33b5c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.723421eb.chunk.css.map": "/static/css/2.723421eb.chunk.css.map",
+    "static/css/main.bf3a4b37.chunk.css.map": "/static/css/main.bf3a4b37.chunk.css.map",
+    "static/js/2.3af8a948.chunk.js.LICENSE.txt": "/static/js/2.3af8a948.chunk.js.LICENSE.txt",
+    "static/media/userlogin.css": "/static/media/backgroundmobile.fb751ab5.png",
+    "static/media/brands.min.css": "/static/media/fa-brands-400.ec3cfdde.woff",
+    "static/media/regular.css": "/static/media/fa-regular-400.f89ea91e.woff",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.1ab236ed.ttf",
+    "static/media/solid.min.css": "/static/media/fa-solid-900.ec763292.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc75219d.js",
+    "static/css/2.723421eb.chunk.css",
+    "static/js/2.3af8a948.chunk.js",
+    "static/css/main.bf3a4b37.chunk.css",
+    "static/js/main.efebbccc.chunk.js"
+  ]
+}
